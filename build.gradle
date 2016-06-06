@@ -45,6 +45,15 @@ jacocoTestReport {
     }
 }
 
+task testeJenkins(type: TesteJenkins)
+
+class TesteJenkins extends DefaultTask {
+   @TaskAction
+    def greet() {
+        println 'Executando Task de testes'
+    }
+}
+
 
 // Gradle wrapper
 task wrapper(type: Wrapper) {
